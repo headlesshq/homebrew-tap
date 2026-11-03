@@ -5,7 +5,7 @@
 ## Install
 
 ```shell
-brew install headlesshq/tap
+brew tap headlesshq/tap
 brew install headlessmc
 ```
 
