@@ -99,8 +99,8 @@ jobs:
 
   publish:
     needs: [ render, test ]
-    # inputs.publish is only set for manual runs
-    if: inputs.publish != false
+    # inputs.publish is only set for manual runs, without one it is empty, which equals false in expressions
+    if: github.event_name != 'workflow_dispatch' || inputs.publish
     runs-on: ubuntu-latest
     permissions:
       contents: write
